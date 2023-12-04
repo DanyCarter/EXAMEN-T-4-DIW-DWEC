@@ -1,4 +1,6 @@
-class vehiculo {
+import { mostrarResultado } from "./main";
+
+export class vehiculo {
     #marca;
     #modelo;
     #color;
@@ -13,6 +15,37 @@ constructor (marca, modelo, color, añoFabricacion, cilindrada) {
     this.#añoFabricacion = añoFabricacion;
     this.#cilindrada = cilindrada;
  }
+
+mostrarDatos(){
+const mensaje= `
+<br />
+La marca del modelo es ${this.#marca}
+<br />
+El modelo es ${this.#modelo}
+<br />
+El color del coche es ${this.#color}
+<br />
+El año de fabricacion es ${this.#añoFabricacion} 
+<br />
+La cilindrada es ${this.#cilindrada}
+`
+}
+
+
+acelerar(velocidad){
+const mensaje =`El vehiculo de color ${this.#color} ha acelerado`;
+ }
+
+ arrancar(){
+    const mensaje = `El vehiculo ha arrancado`;
+ }
+
+ acelerar(){
+    const mensaje = `El vehiculo ${this.#marca} ha acelerado`;
+ }
+
+
+
 get marca(){
     return this.#marca;
 }
@@ -54,5 +87,17 @@ set cilindrada(cilindrada){
 }
 
 
+mostrarDatos(){
+
+    super.mostrarDatos();
+
+    const datosVehiculo =`${mensaje}`;
+    mostrarResultado(`<p>${ mensaje }</p>`);
+}
+
+/* 
+
+
+*/
 
 }
