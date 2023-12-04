@@ -40,11 +40,9 @@ const mensaje =`El vehiculo de color ${this.#color} ha acelerado`;
     const mensaje = `El vehiculo ha arrancado`;
  }
 
- acelerar(){
-    const mensaje = `El vehiculo ${this.#marca} ha acelerado`;
+ frenar(){
+    const mensaje = `El vehiculo ${this.#marca} ha frenado`;
  }
-
-
 
 get marca(){
     return this.#marca;
@@ -95,9 +93,5 @@ mostrarDatos(){
     mostrarResultado(`<p>${ mensaje }</p>`);
 }
 
-/* 
-
-
-*/
 
 }
