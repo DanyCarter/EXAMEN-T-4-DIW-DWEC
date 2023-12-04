@@ -1,6 +1,7 @@
-import { mostrarResultado } from "./main";
+import { mostrarResultado } from "./main.js"
 
-export class vehiculo {
+
+export class Vehiculo {
     #marca;
     #modelo;
     #color;
@@ -8,90 +9,88 @@ export class vehiculo {
     #cilindrada;
 
 
-constructor (marca, modelo, color, añoFabricacion, cilindrada) {
-    this.#marca = marca;
-    this.#modelo = modelo;
-    this.#color = color;
-    this.#añoFabricacion = añoFabricacion;
-    this.#cilindrada = cilindrada;
- }
+    constructor(marca, modelo, color, añoFabricacion, cilindrada) {
+        this.#marca = marca;
+        this.#modelo = modelo;
+        this.#color = color;
+        this.#añoFabricacion = añoFabricacion;
+        this.#cilindrada = cilindrada;
+    }
 
-mostrarDatos(){
-const mensaje= `
+    mostrarDatos() {
+        const mensaje = `
 <br />
-La marca del modelo es ${this.#marca}
+La marca del modelo es: ${this.#marca}
 <br />
 El modelo es ${this.#modelo}
 <br />
-El color del coche es ${this.#color}
+El color del coche es: ${this.#color}
 <br />
-El año de fabricacion es ${this.#añoFabricacion} 
+El año de fabricacion es: ${this.#añoFabricacion} 
 <br />
-La cilindrada es ${this.#cilindrada}
+La cilindrada es: ${this.#cilindrada}
 `
-}
+        mostrarResultado(`<p>${mensaje}</p>`);
+
+    }
 
 
-acelerar(velocidad){
-const mensaje =`El vehiculo de color ${this.#color} ha acelerado`;
- }
+    acelerar(velocidad) {
+        const mensaje = `El vehiculo ha acelerado`;
+        mostrarResultado(`<p>${mensaje}</p>`);
 
- arrancar(){
-    const mensaje = `El vehiculo ha arrancado`;
- }
+    }
 
- frenar(){
-    const mensaje = `El vehiculo ${this.#marca} ha frenado`;
- }
+    arrancar() {
+        const mensaje = `El vehiculo ha arrancado`;
+        mostrarResultado(`<p>${mensaje}</p>`);
 
-get marca(){
-    return this.#marca;
-}
+    }
 
-set marca(marca) {
-    this.#marca = marca;
-}
+    frenar() {
+        const mensaje = `El vehiculo ${this.#marca} ha frenado`;
+        mostrarResultado(`<p>${mensaje}</p>`);
 
-get modelo(){
-    return this.#modelo
-}
+    }
 
-set modelo(modelo){
-    this.#modelo = modelo
-}
+    get marca() {
+        return this.#marca;
+    }
 
-get color(){
-    return this.#modelo;
-}
+    set marca(marca) {
+        this.#marca = marca;
+    }
 
-set color(color){
-    this.#color = color;
-}
+    get modelo() {
+        return this.#modelo
+    }
 
-get añoFabricacion(){
-    return this.#añoFabricacion;
-}
+    set modelo(modelo) {
+        this.#modelo = modelo
+    }
 
-set añoFabricacion(añoFabricacion){
-    this.#añoFabricacion = añoFabricacion;
-}
+    get color() {
+        return this.#modelo;
+    }
 
-get cilindrada(){
-    return this.#cilindrada;
-}
+    set color(color) {
+        this.#color = color;
+    }
 
-set cilindrada(cilindrada){
-    this.#añoFabricacion = cilindrada;
-}
+    get añoFabricacion() {
+        return this.#añoFabricacion;
+    }
 
+    set añoFabricacion(añoFabricacion) {
+        this.#añoFabricacion = añoFabricacion;
+    }
 
-mostrarDatos(){
+    get cilindrada() {
+        return this.#cilindrada;
+    }
 
-    super.mostrarDatos();
-
-    const datosVehiculo =`${mensaje}`;
-    mostrarResultado(`<p>${ mensaje }</p>`);
-}
-
+    set cilindrada(cilindrada) {
+        this.#añoFabricacion = cilindrada;
+    }
 
 }

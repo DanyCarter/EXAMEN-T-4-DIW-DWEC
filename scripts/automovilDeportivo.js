@@ -1,11 +1,11 @@
-import { vehiculo } from "./vehiculo";
-import { mostrarResultado } from "./main";
+import { Vehiculo } from "./vehiculo.js"
+import { mostrarResultado } from "./main.js"
 
-export class automovilDeportivo extends vehiculo(){
+export class AutomovilDeportivo extends Vehiculo{
     #activarModoDeportivo;
 
 
-contructor (marca, modelo, color, añoFabricacion, cilindrada, activarModoDeportivo){
+constructor (marca, modelo, color, añoFabricacion, cilindrada, activarModoDeportivo){
     super(marca, modelo, color, añoFabricacion, cilindrada);
 
     this.#activarModoDeportivo = activarModoDeportivo;
